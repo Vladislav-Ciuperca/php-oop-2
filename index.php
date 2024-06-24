@@ -1,3 +1,7 @@
+<?php
+require_once __DIR__ . "/data.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,6 +15,14 @@
 <body>
 
     <h1>hellp OOP 2</h1>
+
+    <ul>
+        <?php foreach ($prodotti as $prodotto) { ?>
+            <li>
+                <?php echo $prodotto->descrizione(); ?><br>
+            </li>
+        <?php } ?>
+    </ul>
 
 </body>
 
