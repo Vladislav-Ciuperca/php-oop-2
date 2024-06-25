@@ -22,4 +22,10 @@ class Product
             "desc:" . $this->item->desc;
     }
 
+    public function getPrezzo(){
+        return "$ " . $this->prezzo;
+    }
+    
+    public function getDiscount(){}
+    
 }

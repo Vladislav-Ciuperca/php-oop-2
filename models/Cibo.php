@@ -20,9 +20,20 @@ class Cibo extends Product
     {
         return "Animale " . $this->animale .
             " nome:" . $this->item->nome .
-            " Prezzo " . $this->prezzo .
-            " desc: " . $this->item->desc. 
-            " grandezza " . $this->peso.
+            " Prezzo " . ($this->prezzo) - 10 .
+            " desc: " . $this->item->desc .
+            " grandezza " . $this->peso .
             " composizione " . $this->composizione;
+    }
+
+    public function getDiscount()
+    {
+        $discounted = $this->prezzo - (($this->prezzo)* 13 / 100);
+        return " $ " . number_format($discounted,2);
+    }
+
+    public function getPrezzo()
+    {
+        return '<span class="discounted">' . " $ " . $this->prezzo . '</span>';
     }
 }
