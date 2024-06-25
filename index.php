@@ -17,11 +17,9 @@ require_once __DIR__ . "/data.php";
     <h1>hellp OOP 2</h1>
 
     <ul>
-        <?php foreach ($prodotti as $prodotto) { ?>
-            <li>
-                <?php echo $prodotto->descrizione(); ?><br>
-            </li>
-        <?php } ?>
+        <?php foreach ($prodotti as $prodotto) { 
+          echo  "<li>" .   $prodotto->descrizione() . "</li>" ; 
+        } ?>
     </ul>
 
 </body>

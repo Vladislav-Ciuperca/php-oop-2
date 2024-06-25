@@ -1,25 +1,25 @@
-<!-- prodotto dove sta la funzione che stampa in pagina -->
 <?php
 
-class Product
+class Gioco extends Product
 {
-    public $item;
-    public $animale;
-    public $prezzo;
+    private $materiale;
 
-    public function __construct(Item $item, $animale, $prezzo)
+    public function __construct(item $item, $animale, $prezzo, $materiale)
     {
         $this->item = $item;
         $this->animale = $animale;
         $this->prezzo = $prezzo;
+
+        $this->materiale = $materiale;
     }
+
 
     public function descrizione()
     {
         return "Animale " . $this->animale .
             " nome:" . $this->item->nome .
             " Prezzo " . $this->prezzo .
-            "desc:" . $this->item->desc;
+            " desc: " . $this->item->desc. 
+            " grandezza " . $this->materiale;
     }
-
 }

@@ -1,25 +1,25 @@
-<!-- prodotto dove sta la funzione che stampa in pagina -->
 <?php
 
-class Product
+class Cuccia extends Product
 {
-    public $item;
-    public $animale;
-    public $prezzo;
+    private $grandezza;
 
-    public function __construct(Item $item, $animale, $prezzo)
+    public function __construct(item $item, $animale, $prezzo, $grandezza)
     {
         $this->item = $item;
         $this->animale = $animale;
         $this->prezzo = $prezzo;
+
+        $this->grandezza = $grandezza;
     }
+
 
     public function descrizione()
     {
         return "Animale " . $this->animale .
             " nome:" . $this->item->nome .
             " Prezzo " . $this->prezzo .
-            "desc:" . $this->item->desc;
+            " desc: " . $this->item->desc. 
+            " grandezza " . $this->grandezza;
     }
-
 }
